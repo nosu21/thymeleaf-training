@@ -9,8 +9,14 @@
 <p>Pozdrowienia</p>
 
 <h1 th:text="${name}"></h1>
-<h1 th:text="${car.getMark()}"></h1>
-<h1 th:text="${car.getModel()}"></h1>
+<table>
+<tr th:each="car: ${cars}">
+    <td th:text="${car.getMark()}"></td><br>
+    <td th:text="${car.getModel()}"></td>
+    <p>=========================</p>
+</tr>
+</table>
+
 
 </body>
 </html>
